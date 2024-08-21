@@ -1,4 +1,5 @@
 // I dont have any image rights, this is only for studies
+alert("This website i made only for studies in alura, i dont have any image rights \n Esse website eu fiz apenas para estudos no alura, eu não tenho direito de nenhuma imagem");
 
 const images = [
     {
