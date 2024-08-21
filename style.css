@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root
+{
+    --background-principal: #3d405b;
+    --background-secondary: #81b29a;
+    --text: #f4f1de;
+    --button-primary: #e07a5f;
+    --button-secondary: #f2cc8f;
+}
+
+body,html
+{
+    margin: 0;
+    padding: 0;
+}
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: var(--text);
+
+    font-family: "Indie Flower", cursive;
+}
+
+header
+{
+    background-color: var(--background-principal);
+    box-shadow: 0px 0px 5px #0005;
+}
+
+header ul
+{
+    display: flex;
+    justify-content: space-evenly;
+
+    list-style: none;
+    padding: 15px;
+    gap: 10px;
+}
+
+header ul li
+{
+    background-color: var(--button-primary);
+    padding: 10px;
+    border-radius: 50px;
+    width: 100%;
+    text-align: center;
+
+    cursor: pointer;
+    flex: 1;
+    transition: .2s;
+}
+
+header ul li:hover
+{
+    background-color: var(--button-secondary);
+    flex: 2;
+}
+
+
+
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    perspective: 800px;
+    padding: 10px;
+}
+
+main img
+{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    transition: .2s;
+}
+
+main img:hover
+{
+    transform: translateY(-10px) translateZ(10px);
+    box-shadow: 0px 5px 5px #0005;
+    opacity: 1;
+}
+
+
+
+@media only screen and (max-width: 450px)
+{
+    header ul
+    {
+        padding: 0;
+        gap: 0px;
+    }
+
+    header ul li
+    {
+        border-radius: 0px;
+    }
+
+    main img
+    {
+        width: 150px;
+        height: 200px;
+    }
+}
