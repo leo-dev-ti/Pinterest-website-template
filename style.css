@@ -21,6 +21,8 @@ body,html
     margin: 0;
     padding: 0;
     color: var(--text);
+    outline: none;
+    scroll-behavior: smooth;
 
     font-family: "Indie Flower", cursive;
 }
@@ -38,26 +40,31 @@ header ul
 
     list-style: none;
     padding: 15px;
-    gap: 10px;
+    gap: 1px;
 }
 
-header ul li
+header ul li, header ul a
 {
     background-color: var(--button-primary);
     padding: 10px;
-    border-radius: 50px;
     width: 100%;
     text-align: center;
 
     cursor: pointer;
     flex: 1;
+    text-decoration: none;
     transition: .2s;
 }
 
-header ul li:hover
+header ul li:hover, header ul a:hover
 {
     background-color: var(--button-secondary);
     flex: 2;
+}
+
+header ul a:hover
+{
+    background-color: var(--background-secondary);
 }
 
 
@@ -77,16 +84,113 @@ main img
     width: 200px;
     height: 300px;
     object-fit: cover;
+    cursor: pointer;
     transition: .2s;
 }
 
 main img:hover
 {
-    transform: translateY(-10px) translateZ(10px);
     box-shadow: 0px 5px 5px #0005;
-    opacity: 1;
 }
 
+
+
+#signature {
+    width: 100vw;
+    text-align: center;
+}
+
+#signature #plans {
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+
+#signature #plans div {
+    border: 1px solid #111;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 75vh;
+    padding: 10px;
+    justify-content: space-between;
+    transition: .1s;
+}
+
+#signature #plans div button {
+    width: 100%;
+    cursor: pointer;
+    border: none;
+    background-color: var(--button-primary);
+    color: var(--text);
+    transition: .2s;
+    padding: 10px;
+}
+
+#signature #plans div button:hover {
+    background-color: var(--button-secondary);
+}
+
+#signature * {
+    color: #111;
+    font-size: 20px;
+}
+
+
+#login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 10px;
+    width: 100vw;
+}
+
+#login h1 {
+    color: #111;
+    font-size: 50px;
+}
+
+#login input {
+    width: 50%;
+    padding: 20px;
+    border: 0;
+    background-color: var(--background-secondary);
+    font-size: 30px;
+    text-align: center;
+}
+
+#login #newAccount {
+    display: flex;
+    gap: 5px;
+    width: 100%;
+    justify-content: center;
+}
+
+#login #newAccount input {
+    width: auto;
+    cursor: pointer;
+}
+
+#login #newAccount * {
+    color: #111;
+}
+
+#login button {
+    font-size: 30px;
+    cursor: pointer;
+    width: 50%;
+    background-color: var(--button-primary);
+    padding: 10px;
+    border: 0;
+    transition: .2s;
+}
+
+#login button:hover {
+    background-color: var(--button-secondary);
+}
 
 
 @media only screen and (max-width: 450px)
@@ -106,5 +210,13 @@ main img:hover
     {
         width: 150px;
         height: 200px;
+    }
+
+    #signature #plans {
+        flex-direction: column;
+    }
+
+    #signature * {
+        font-size: 30px;
     }
 }

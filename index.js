@@ -1,5 +1,4 @@
 // I dont have any image rights, this is only for studies
-alert("This website i made only for studies in alura, i dont have any image rights \n Esse website eu fiz apenas para estudos no alura, eu não tenho direito de nenhuma imagem");
 
 const images = [
     {
@@ -103,11 +102,17 @@ const images = [
 
 for(let x in images)
 {
-    var img = document.createElement("img");
+    let img = document.createElement("img");
     img.src = images[x].src;
     img.id = images[x].tag;
-
+    img.style.opacity = 0;
+    img.style.transform = "rotateY(30deg)";
     document.querySelector("main").appendChild(img);
+
+    setTimeout(function(){
+        img.style.opacity = 1;
+        img.style.transform = "rotateY(0deg)";
+    },x*100);
 }
 
 const buttons = document.querySelectorAll("header ul li");

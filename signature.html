@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signature</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <a href="./index.html">Back</a>
+            <a href="#login">Login</a>
+        </ul>
+    </header>
+    <main>
+        <div id="signature">
+            <h1>Select a signature</h1>
+            <div id="plans">
+                <div id="signature1">
+                    <h1>Simple</h1>
+                    <p>Free plan for you, create your free account only to navigate on this website.</p>
+                    <button onclick="selectSignature(1,'Simple')">Free</button>
+                </div>
+                <div id="signature2">
+                    <h1>Pro</h1>
+                    <p>Pro plan to download pictures for free with better quality.</p>
+                    <button onclick="selectSignature(2,'Pro')">$12,00</button>
+                </div>
+                <div id="signature3">
+                    <h1>Creator</h1>
+                    <p>Plan for creator, you can publish pictures and improve their quality and use our AI to help you to improve your public.</p>
+                    <button onclick="selectSignature(3,'Creator')">$20,00</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="login">
+            <h1>Signature</h1>
+            <input type="email" placeholder="Email" id="email">
+            <input type="password" placeholder="Password" id="password">
+            <div id="newAccount">
+                <input type="checkbox" id="">
+                <p>New Account?</p>
+            </div>
+            <button onclick="submitAccount()">Submit</button>
+        </div>
+    </main>
+
+    <script src="signature.js"></script>
+</body>
+</html>
